@@ -29,7 +29,6 @@ public class RNAdmobMediaView extends MediaView {
         }
     };
 
-
     public void setVideoController(VideoController videoController) {
         vc = videoController;
     }
@@ -62,7 +61,9 @@ public class RNAdmobMediaView extends MediaView {
     @Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-
+        if(this != null){
+            this.removeAllViews();
+        }
     }
 
     @Override
